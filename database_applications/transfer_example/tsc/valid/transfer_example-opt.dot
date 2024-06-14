@@ -1,0 +1,70 @@
+digraph "Iteration 1" { 
+label="Iteration 1" 
+subgraph "T0" { 
+edge [weight=100] 
+"main:T0/E3\n@transfer_example.c#36
+W(&__com1__transaction, 1, REL)" -> "main:T0/E4\n@transfer_example.c#36
+W(bv64(0), 1)"
+"main:T0/E4\n@transfer_example.c#36
+W(bv64(0), 1)" -> "main:T0/E7\n@transfer_example.c#40
+W(&__com2__read, 1, REL)"
+
+}subgraph "T1" { 
+edge [weight=100] 
+"transaction:T1/E15\n@unknown
+1 = R(&__com1__transaction, ACQ)" -> "transaction:T1/E19\n@transfer_example.c#17
+ACQ"
+"transaction:T1/E19\n@transfer_example.c#17
+ACQ" -> "transaction:T1/E20\n@transfer_example.c#18
+W(&y, 100)"
+"transaction:T1/E20\n@transfer_example.c#18
+W(&y, 100)" -> "transaction:T1/E21\n@transfer_example.c#19
+W(&x, 0)"
+"transaction:T1/E21\n@transfer_example.c#19
+W(&x, 0)" -> "transaction:T1/E22\n@transfer_example.c#20
+REL"
+"transaction:T1/E22\n@transfer_example.c#20
+REL" -> "transaction:T1/E26\n@unknown
+W(&__com1__transaction, 0, REL)"
+
+}subgraph "T2" { 
+edge [weight=100] 
+"read:T2/E29\n@unknown
+1 = R(&__com2__read, ACQ)" -> "read:T2/E33\n@transfer_example.c#25
+ACQ"
+"read:T2/E33\n@transfer_example.c#25
+ACQ" -> "read:T2/E34\n@transfer_example.c#26
+0 = R(&x)"
+"read:T2/E34\n@transfer_example.c#26
+0 = R(&x)" -> "read:T2/E35\n@transfer_example.c#27
+100 = R(&y)"
+"read:T2/E35\n@transfer_example.c#27
+100 = R(&y)" -> "read:T2/E36\n@transfer_example.c#28
+REL"
+
+}subgraph "ReadFrom" { 
+edge [color=green] 
+"main:T0/E3\n@transfer_example.c#36
+W(&__com1__transaction, 1, REL)" -> "transaction:T1/E15\n@unknown
+1 = R(&__com1__transaction, ACQ)" [label=rf]
+"main:T0/E7\n@transfer_example.c#40
+W(&__com2__read, 1, REL)" -> "read:T2/E29\n@unknown
+1 = R(&__com2__read, ACQ)" [label=rf]
+"transaction:T1/E21\n@transfer_example.c#19
+W(&x, 0)" -> "read:T2/E34\n@transfer_example.c#26
+0 = R(&x)" [label=rf]
+"transaction:T1/E20\n@transfer_example.c#18
+W(&y, 100)" -> "read:T2/E35\n@transfer_example.c#27
+100 = R(&y)" [label=rf]
+
+}subgraph "FromRead" { 
+edge [color=orange] 
+
+}subgraph "Coherence" { 
+edge [color=red] 
+"transaction:T1/E26\n@unknown
+W(&__com1__transaction, 0, REL)" -> "main:T0/E3\n@transfer_example.c#36
+W(&__com1__transaction, 1, REL)" [label=co]
+
+}
+}

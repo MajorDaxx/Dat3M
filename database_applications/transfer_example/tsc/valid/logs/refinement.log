@@ -1,0 +1,23 @@
+[14.06.2024] 14:51:49 [32m[INFO][m RefinementSolver.run - refinement.baseline: []
+[14.06.2024] 14:51:49 [32m[INFO][m RefinementSolver.runInternal - Starting encoding using Z3 4.12.2.0
+[14.06.2024] 14:51:49 [32m[INFO][m RefinementSolver.runInternal - Refinement procedure started.
+[14.06.2024] 14:51:49 [32m[INFO][m RefinementSolver.runInternal - Checking target property.
+[14.06.2024] 14:51:49 [32m[INFO][m RefinementSolver.runInternal - Specification violation found.
+[14.06.2024] 14:51:49 [32m[INFO][m RefinementSolver.runInternal - Summary
+ ======== Summary ========
+Number of iterations: 2
+Total native solving time: 0.1 secs
+   -- Bound check time: 0.0 secs
+Total CAAT solving time: 0.86 secs
+   -- Model extraction time: 0.14 secs
+   -- Population time: 0.37 secs
+   -- Consistency check time: 0.1 secs
+   -- Reason computation time: 0.30 secs
+   -- Refining time: 0.2 secs
+   -- #Computed core reasons: 2
+   -- #Computed core reduced reasons: 2
+   -- Min model size (#events): 18
+   -- Average model size (#events): 18
+   -- Max model size (#events): 18
+
+[14.06.2024] 14:51:49 [32m[INFO][m RefinementSolver.runInternal - Verification finished with result FAIL

@@ -1,0 +1,163 @@
+[14.06.2024] 14:51:48 [32m[INFO][m GitInfo.CreateGitInfo - Git branch: master
+[14.06.2024] 14:51:48 [32m[INFO][m GitInfo.CreateGitInfo - Git commit ID: e14e2efc4cff45cf0bd4c7fd3fc3e52853a19bf7
+[14.06.2024] 14:51:48 [32m[INFO][m GlobalSettings.logGlobalSettings - REFINEMENT_GENERATE_GRAPHVIZ_DEBUG_FILES: false
+[14.06.2024] 14:51:48 [32m[INFO][m GlobalSettings.logGlobalSettings - REFINEMENT_SYMMETRIC_LEARNING: FULL
+[14.06.2024] 14:51:48 [32m[INFO][m Dartagnan.main - Program path: database_applications/transfer_example/transfer_example.c
+[14.06.2024] 14:51:48 [32m[INFO][m Dartagnan.main - CAT file path: cat/database_isolation_level/tsc.cat
+[14.06.2024] 14:51:49 [33m[WARN][m VisitorLlvm.visitUndefConst - Encountered undef constant of type bv64. Constant was replaced by zero.
+[14.06.2024] 14:51:49 [33m[WARN][m VisitorLlvm.visitUndefConst - Encountered undef constant of type bv64. Constant was replaced by zero.
+[14.06.2024] 14:51:49 [33m[WARN][m VisitorLlvm.visitUndefConst - Encountered undef constant of type bv64. Constant was replaced by zero.
+[14.06.2024] 14:51:49 [32m[INFO][m Wmm.configureAll - encoding.wmm.reduceAcyclicityEncodeSets: true
+[14.06.2024] 14:51:49 [32m[INFO][m LoopFormVerification.run - Detected 0 loops in the program.
+[14.06.2024] 14:51:49 [32m[INFO][m Compilation.run - Program compiled to C11
+[14.06.2024] 14:51:49 [32m[INFO][m DynamicSpinLoopDetection.run - Found 0 static spin loops and 0 potential spin loops.
+[14.06.2024] 14:51:49 [32m[INFO][m LoopUnrolling.run - Program unrolled 1 times
+[14.06.2024] 14:51:49 [32m[INFO][m ThreadCreation.run - Number of threads (including main): 3
+[14.06.2024] 14:51:49 [32m[INFO][m LogThreadStatistics.run - 
+======== Program statistics ========
+#Threads: 3
+#Events: 67
+	#Annotations: 1
+	#Stores: 7
+	#Loads: 4
+	#Inits: 4
+	#Others: 4
+#Allocated bytes: 10
+	Statically allocated: 10
+	Dynamically allocated: 0
+========================================
+[14.06.2024] 14:51:49 [32m[INFO][m Dependency.fromConfig - Analyze dependencies
+[14.06.2024] 14:51:49 [32m[INFO][m AliasAnalysis.fromConfig - Selected alias analysis: FIELD_SENSITIVE
+[14.06.2024] 14:51:49 [32m[INFO][m AliasAnalysis.fromConfig - Finished alias analysis in 0.8 secs
+[14.06.2024] 14:51:49 [32m[INFO][m RelationAnalysis.fromConfig - 
+	wmm.analysis.relationAnalysis: true
+	wmm.analysis.mustSets: true
+	wmm.analysis.extendedRelationAnalysis: true
+[14.06.2024] 14:51:49 [32m[INFO][m RelationAnalysis.fromConfig - Finished regular analysis in 0.26 secs
+[14.06.2024] 14:51:49 [32m[INFO][m RelationAnalysis.fromConfig - Finished extended analysis in 0.23 secs
+[14.06.2024] 14:51:49 [32m[INFO][m RelationAnalysis.fromConfig - 
+======== RelationAnalysis summary ======== 
+	#Relations: 31
+	#Axioms: 2
+	#may-edges removed (extended): 94
+	#must-edges added (extended): 6
+	total #must|may|exclusive edges: 305|391|0
+	#must|may rf edges: 2|6
+	#must|may co edges: 8|8
+===========================================
+[14.06.2024] 14:51:49 [32m[INFO][m Wmm.configureAll - encoding.wmm.reduceAcyclicityEncodeSets: true
+[14.06.2024] 14:51:49 [32m[INFO][m RelationAnalysis.fromConfig - 
+	wmm.analysis.relationAnalysis: true
+	wmm.analysis.mustSets: true
+	wmm.analysis.extendedRelationAnalysis: true
+[14.06.2024] 14:51:49 [32m[INFO][m RelationAnalysis.fromConfig - Finished regular analysis in 0.5 secs
+[14.06.2024] 14:51:49 [32m[INFO][m Assumption.computeInitialKnowledgeClosure - Assumption disables 2 and enables 2 at co
+[14.06.2024] 14:51:49 [32m[INFO][m RelationAnalysis.fromConfig - Finished extended analysis in 0.4 secs
+[14.06.2024] 14:51:49 [32m[INFO][m RelationAnalysis.fromConfig - 
+======== RelationAnalysis summary ======== 
+	#Relations: 16
+	#Axioms: 4
+	#may-edges removed (extended): 2
+	#must-edges added (extended): 2
+	total #must|may|exclusive edges: 214|220|0
+	#must|may rf edges: 2|6
+	#must|may co edges: 8|8
+===========================================
+[14.06.2024] 14:51:49 [32m[INFO][m EncodingContext.of - encoding.wmm.idl2sat: false
+[14.06.2024] 14:51:49 [32m[INFO][m EncodingContext.of - encoding.mergeCFVars: true
+[14.06.2024] 14:51:49 [32m[INFO][m EncodingContext.of - Number of encoded edges for acyclicity: 0
+[14.06.2024] 14:51:49 [32m[INFO][m ProgramEncoder.withContext - encoding.initializeRegisters: false
+[14.06.2024] 14:51:49 [32m[INFO][m SymmetryEncoder.<init> - Symmetry breaking disabled.
+[14.06.2024] 14:51:49 [32m[INFO][m WmmEncoder.withContext - encoding.activeSets: true
+[14.06.2024] 14:51:49 [32m[INFO][m WmmEncoder.withContext - modeling.memoryIsZeroed: true
+[14.06.2024] 14:51:49 [32m[INFO][m WmmEncoder.withContext - Finished active sets in 0.12 secs
+[14.06.2024] 14:51:49 [32m[INFO][m WmmEncoder.withContext - Number of unknown edges: 6
+[14.06.2024] 14:51:49 [32m[INFO][m WmmEncoder.withContext - Number of encoded edges: 58
+[14.06.2024] 14:51:49 [32m[INFO][m ProgramEncoder.encodeMemory - Encoding memory
+[14.06.2024] 14:51:49 [32m[INFO][m ProgramEncoder.encodeControlFlow - Encoding program control flow
+[14.06.2024] 14:51:49 [32m[INFO][m ProgramEncoder.encodeFinalRegisterValues - Skipping encoding of final register values: C-Code has no assertions over those values.
+[14.06.2024] 14:51:49 [32m[INFO][m ProgramEncoder.encodeDependencies - Encoding dependencies
+[14.06.2024] 14:51:49 [32m[INFO][m WmmEncoder.encodeRelations - Encoding relations
+[14.06.2024] 14:51:49 [32m[INFO][m WmmEncoder.encodeConsistency - Encoding consistency
+[14.06.2024] 14:51:49 [32m[INFO][m PropertyEncoder.encodeProgramSpecification - Encoding program specification
+[14.06.2024] 14:54:29 [32m[INFO][m GitInfo.CreateGitInfo - Git branch: master
+[14.06.2024] 14:54:29 [32m[INFO][m GitInfo.CreateGitInfo - Git commit ID: e14e2efc4cff45cf0bd4c7fd3fc3e52853a19bf7
+[14.06.2024] 14:54:29 [32m[INFO][m GlobalSettings.logGlobalSettings - REFINEMENT_GENERATE_GRAPHVIZ_DEBUG_FILES: false
+[14.06.2024] 14:54:29 [32m[INFO][m GlobalSettings.logGlobalSettings - REFINEMENT_SYMMETRIC_LEARNING: FULL
+[14.06.2024] 14:54:29 [32m[INFO][m Dartagnan.main - Program path: database_applications/transfer_example/transfer_example.c
+[14.06.2024] 14:54:29 [32m[INFO][m Dartagnan.main - CAT file path: cat/database_isolation_level/empty.cat
+[14.06.2024] 14:54:30 [33m[WARN][m VisitorLlvm.visitUndefConst - Encountered undef constant of type bv64. Constant was replaced by zero.
+[14.06.2024] 14:54:30 [33m[WARN][m VisitorLlvm.visitUndefConst - Encountered undef constant of type bv64. Constant was replaced by zero.
+[14.06.2024] 14:54:30 [33m[WARN][m VisitorLlvm.visitUndefConst - Encountered undef constant of type bv64. Constant was replaced by zero.
+[14.06.2024] 14:54:30 [32m[INFO][m Wmm.configureAll - encoding.wmm.reduceAcyclicityEncodeSets: true
+[14.06.2024] 14:54:30 [32m[INFO][m LoopFormVerification.run - Detected 0 loops in the program.
+[14.06.2024] 14:54:30 [32m[INFO][m Compilation.run - Program compiled to C11
+[14.06.2024] 14:54:30 [32m[INFO][m DynamicSpinLoopDetection.run - Found 0 static spin loops and 0 potential spin loops.
+[14.06.2024] 14:54:30 [32m[INFO][m LoopUnrolling.run - Program unrolled 1 times
+[14.06.2024] 14:54:30 [32m[INFO][m ThreadCreation.run - Number of threads (including main): 3
+[14.06.2024] 14:54:30 [32m[INFO][m LogThreadStatistics.run - 
+======== Program statistics ========
+#Threads: 3
+#Events: 65
+	#Annotations: 1
+	#Stores: 7
+	#Loads: 4
+	#Inits: 4
+	#Others: 4
+#Allocated bytes: 10
+	Statically allocated: 10
+	Dynamically allocated: 0
+========================================
+[14.06.2024] 14:54:30 [32m[INFO][m Dependency.fromConfig - Analyze dependencies
+[14.06.2024] 14:54:30 [32m[INFO][m AliasAnalysis.fromConfig - Selected alias analysis: FIELD_SENSITIVE
+[14.06.2024] 14:54:30 [32m[INFO][m AliasAnalysis.fromConfig - Finished alias analysis in 0.6 secs
+[14.06.2024] 14:54:30 [32m[INFO][m RelationAnalysis.fromConfig - 
+	wmm.analysis.relationAnalysis: true
+	wmm.analysis.mustSets: true
+	wmm.analysis.extendedRelationAnalysis: true
+[14.06.2024] 14:54:30 [32m[INFO][m RelationAnalysis.fromConfig - Finished regular analysis in 0.15 secs
+[14.06.2024] 14:54:30 [32m[INFO][m RelationAnalysis.fromConfig - Finished extended analysis in 0.9 secs
+[14.06.2024] 14:54:30 [32m[INFO][m RelationAnalysis.fromConfig - 
+======== RelationAnalysis summary ======== 
+	#Relations: 10
+	#Axioms: 1
+	#may-edges removed (extended): 10
+	#must-edges added (extended): 0
+	total #must|may|exclusive edges: 68|78|0
+	#must|may rf edges: 2|6
+	#must|may co edges: 6|10
+===========================================
+[14.06.2024] 14:54:30 [32m[INFO][m Wmm.configureAll - encoding.wmm.reduceAcyclicityEncodeSets: true
+[14.06.2024] 14:54:30 [32m[INFO][m RelationAnalysis.fromConfig - 
+	wmm.analysis.relationAnalysis: true
+	wmm.analysis.mustSets: true
+	wmm.analysis.extendedRelationAnalysis: true
+[14.06.2024] 14:54:30 [32m[INFO][m RelationAnalysis.fromConfig - Finished regular analysis in 0.0 secs
+[14.06.2024] 14:54:30 [32m[INFO][m RelationAnalysis.fromConfig - Finished extended analysis in 0.1 secs
+[14.06.2024] 14:54:30 [32m[INFO][m RelationAnalysis.fromConfig - 
+======== RelationAnalysis summary ======== 
+	#Relations: 4
+	#Axioms: 1
+	#may-edges removed (extended): 0
+	#must-edges added (extended): 0
+	total #must|may|exclusive edges: 10|20|0
+	#must|may rf edges: 2|6
+	#must|may co edges: 6|10
+===========================================
+[14.06.2024] 14:54:30 [32m[INFO][m EncodingContext.of - encoding.wmm.idl2sat: false
+[14.06.2024] 14:54:30 [32m[INFO][m EncodingContext.of - encoding.mergeCFVars: true
+[14.06.2024] 14:54:30 [32m[INFO][m EncodingContext.of - Number of encoded edges for acyclicity: 0
+[14.06.2024] 14:54:30 [32m[INFO][m ProgramEncoder.withContext - encoding.initializeRegisters: false
+[14.06.2024] 14:54:30 [32m[INFO][m SymmetryEncoder.<init> - Symmetry breaking disabled.
+[14.06.2024] 14:54:30 [32m[INFO][m WmmEncoder.withContext - encoding.activeSets: true
+[14.06.2024] 14:54:30 [32m[INFO][m WmmEncoder.withContext - modeling.memoryIsZeroed: true
+[14.06.2024] 14:54:30 [32m[INFO][m WmmEncoder.withContext - Finished active sets in 0.4 secs
+[14.06.2024] 14:54:30 [32m[INFO][m WmmEncoder.withContext - Number of unknown edges: 10
+[14.06.2024] 14:54:30 [32m[INFO][m WmmEncoder.withContext - Number of encoded edges: 8
+[14.06.2024] 14:54:30 [32m[INFO][m ProgramEncoder.encodeMemory - Encoding memory
+[14.06.2024] 14:54:30 [32m[INFO][m ProgramEncoder.encodeControlFlow - Encoding program control flow
+[14.06.2024] 14:54:30 [32m[INFO][m ProgramEncoder.encodeFinalRegisterValues - Skipping encoding of final register values: C-Code has no assertions over those values.
+[14.06.2024] 14:54:30 [32m[INFO][m ProgramEncoder.encodeDependencies - Encoding dependencies
+[14.06.2024] 14:54:30 [32m[INFO][m WmmEncoder.encodeRelations - Encoding relations
+[14.06.2024] 14:54:30 [32m[INFO][m WmmEncoder.encodeConsistency - Encoding consistency
+[14.06.2024] 14:54:30 [32m[INFO][m PropertyEncoder.encodeProgramSpecification - Encoding program specification

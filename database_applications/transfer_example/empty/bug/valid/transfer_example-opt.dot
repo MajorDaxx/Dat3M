@@ -1,0 +1,44 @@
+digraph "Iteration 1" { 
+label="Iteration 1" 
+subgraph "T0" { 
+edge [weight=100] 
+"main:T0/E3\n@transfer_example.c#36
+W(&__com1__transaction, 1, REL)" -> "main:T0/E4\n@transfer_example.c#36
+W(bv64(0), 1)"
+"main:T0/E4\n@transfer_example.c#36
+W(bv64(0), 1)" -> "main:T0/E7\n@transfer_example.c#40
+W(&__com2__read, 1, REL)"
+
+}subgraph "T2" { 
+edge [weight=100] 
+"read:T2/E29\n@unknown
+1 = R(&__com2__read, ACQ)" -> "read:T2/E33\n@transfer_example.c#25
+ACQ"
+"read:T2/E33\n@transfer_example.c#25
+ACQ" -> "read:T2/E34\n@transfer_example.c#26
+50 = R(&x)"
+"read:T2/E34\n@transfer_example.c#26
+50 = R(&x)" -> "read:T2/E35\n@transfer_example.c#27
+50 = R(&y)"
+"read:T2/E35\n@transfer_example.c#27
+50 = R(&y)" -> "read:T2/E36\n@transfer_example.c#28
+REL"
+
+}subgraph "ReadFrom" { 
+edge [color=green] 
+"main:T0/E7\n@transfer_example.c#40
+W(&__com2__read, 1, REL)" -> "read:T2/E29\n@unknown
+1 = R(&__com2__read, ACQ)" [label=rf]
+"I(&x, 50)" -> "read:T2/E34\n@transfer_example.c#26
+50 = R(&x)" [label=rf]
+"I(&y, 50)" -> "read:T2/E35\n@transfer_example.c#27
+50 = R(&y)" [label=rf]
+
+}subgraph "FromRead" { 
+edge [color=orange] 
+
+}subgraph "Coherence" { 
+edge [color=red] 
+
+}
+}

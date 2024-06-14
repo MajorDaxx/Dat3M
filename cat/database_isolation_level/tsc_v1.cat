@@ -1,0 +1,20 @@
+(* All communication relations *)
+let com = (rf | fr | co)
+
+(* Fences are used as proxys for transaction start and transaction end *)
+let transactionBegin = [ACQ]
+let transactionEnd = [REL]
+
+(*
+ * Events within the same transaction are linked via the sameTrans Relation.
+ * same Transaction a partial equivalence relation
+ *)
+let tBeginToEnd = (transactionBegin;po;transactionEnd) \ (po;transactionEnd;po)
+let sameTrans = po^-1;transactionBegin;tBeginToEnd;po^-1
+
+
+let transHb = sameTrans;(com \ sameTrans);sameTrans
+
+acyclic transHb
+
+acyclic rf;fre;po^-1

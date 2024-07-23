@@ -1,0 +1,41 @@
+(* All communication relations *)
+let com = (rf | fr | co)
+
+(* Fences are used as proxys for transaction start and transaction end *)
+let transactionBegin = [ACQ & F]
+let transactionCommit = [REL & F]
+let transactionAbort = [SC & F]
+
+let transactionEnd = transactionCommit | transactionAbort
+(*
+ * Events within the same transaction are linked via the sameTrans Relation.
+ * same Transaction a partial equivalence relation
+ *)
+let tBeginToEnd = (transactionBegin;po;transactionEnd) \ (po;transactionEnd;po)
+let sameTrans = po^-1;transactionBegin;tBeginToEnd;po^-1 | po^-1;transactionBegin;tBeginToEnd
+
+
+(*
+ *   Sequential concistency per transaction
+ *)
+let transactionOrder = po & sameTrans
+acyclic transactionOrder | com
+
+(*
+ *  SC-perLocation
+ *)
+acyclic(po-loc | com)
+
+(*
+ * Happens before. Induces serilizable
+ *)
+let WW = [W];(co \ sameTrans);[W]
+let transHb =  sameTrans;(com \ sameTrans);sameTrans
+acyclic WW;transHb
+
+(*
+ * Happens before. Induces serilizable
+ *)
+let WR = [W];(rf \ sameTrans);[R]
+let transHb =  sameTrans;(com \ sameTrans);sameTrans
+acyclic WR;transHb
